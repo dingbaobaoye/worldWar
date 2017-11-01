@@ -1,0 +1,348 @@
+body {
+    overflow: hidden;
+    position:relative;
+}
+a {
+    color: #ffffff;
+}
+
+.hide{display:none;}
+img[src=""]{opacity: 0;}
+
+/*load...*/
+#loading{position: absolute;top: 0;left: 0;width:100%;height:100%;z-index:9999;background:url("../images/beijing.jpg") no-repeat center;background-size:100%;}
+.loadhid{display:none;}
+.plane_box{position:absolute;top:0;left:0;width:100%;height:100%;overflow: hidden;}
+.plane1{position:absolute;top:6rem;left:-1rem;width:1rem;animation: plane1 8s linear infinite;-webkit-animation: plane1 8s linear infinite;}
+.plane2{position:absolute;top:1rem;left:-1.5rem;width:1.5rem;animation: plane2 8s linear infinite;-webkit-animation: plane2 8s linear infinite;}
+.plane3{position:absolute;top:3rem;right:-1rem;width:1rem;animation: plane3 8s linear infinite;-webkit-animation: plane3 8s linear infinite;}
+.plane4{position:absolute;top:9rem;right:-1rem;width:0.8rem;animation: plane4 8s linear infinite;-webkit-animation: plane4 8s linear infinite;}
+
+@keyframes plane2 {
+    0%{left:-1.5rem;top:1rem;}
+    50%{left:-1.5rem;top:1rem;}
+    62.5%{left:7.5rem;top:5rem;}
+    100%{left:7.5rem;top:5rem;}
+}
+@keyframes plane3 {
+    0%{right:-1rem;top:4rem;}
+    50%{right:-1rem;top:4rem;}
+    62.5%{right:7.5rem;top:6rem;}
+    100%{right:7.5rem;top:6rem;}
+}
+@keyframes plane1 {
+    0%{left:-1rem;top:6rem;}
+    12.5%{left:7.5rem;top:9rem;}
+    100%{left:7.5rem;top:9rem;}
+}
+@keyframes plane4 {
+    0%{right:-1rem;top:9rem;}
+    12.5%{right:7.5rem;top:11.5rem;}
+    100%{right:7.5rem;top:11.5rem;}
+}
+@-webkit-keyframes plane2 {
+    0%{left:-1.5rem;top:1rem;}
+    50%{left:-1.5rem;top:1rem;}
+    62.5%{left:7.5rem;top:5rem;}
+    100%{left:7.5rem;top:5rem;}
+}
+@-webkit-keyframes plane3 {
+    0%{right:-1rem;top:4rem;}
+    50%{right:-1rem;top:4rem;}
+    62.5%{right:7.5rem;top:6rem;}
+    100%{right:7.5rem;top:6rem;}
+}
+@-webkit-keyframes plane1 {
+    0%{left:-1rem;top:6rem;}
+    12.5%{left:7.5rem;top:9rem;}
+    100%{left:7.5rem;top:9rem;}
+}
+@-webkit-keyframes plane4 {
+    0%{right:-1rem;top:9rem;}
+    12.5%{right:7.5rem;top:11.5rem;}
+    100%{right:7.5rem;top:11.5rem;}
+}
+.bar{background:url("../images/jingdutiao-01.png") no-repeat center;background-size: 100%;width: 3rem;position: absolute;top: 6.5rem;height: 0.3rem;left: 2.25rem;}
+.bar_lan{background:url("../images/jingdutiao-03.png");border-radius: 15px;height:0.2rem;width:0%;}
+.loading_txt{color:#14efec;font-size:0.32rem;position:absolute;top: 6.8rem;left: 0;width: 100%;text-align: center;}
+
+/*step1*/
+#step1{height:100%;position:relative; background:url("../images/beijing.jpg") no-repeat center;background-size:100%;overflow: hidden;}
+/*title*/
+#step1 .title{opacity: 0;position: absolute;bottom: 9rem;width: 100%;}
+#step1 .title.ani{animation: scale 1s linear 1s;animation-fill-mode: forwards;-webkit-animation: scale 1s linear 1s;-webkit-animation-fill-mode: forwards;}
+@keyframes scale {
+    0%{transform: scale(.1);opacity: 0;}
+    100%{transform: scale(1);opacity: 1;}
+}
+@-webkit-keyframes scale {
+    0%{-webkit-transform: scale(.1);opacity: 0;}
+    100%{-webkit-transform: scale(1);opacity: 1;}
+}
+/*people*/
+.peo_left{width:2.5rem;opacity: 0;}
+.peo_left.ani{animation: left 1s linear;animation-fill-mode:forwards;-webkit-animation: left 1s linear;-webkit-animation-fill-mode: forwards;}
+.peo_right{width:3.5rem;opacity: 0;}
+.peo_right.ani{animation: right 1s linear;animation-fill-mode:forwards;-webkit-animation: right 1s linear;-webkit-animation-fill-mode: forwards;}
+@keyframes left {
+    0%{opacity: 0;transform:translateX(-3rem);}
+    100%{opacity: 1;transform:translateX(0.4rem);}
+}
+@keyframes right {
+    0%{opacity: 0;transform:translateX(3rem);}
+    100%{opacity: 1;transform:translateX(0.3rem);}
+}
+@-webkit-keyframes left {
+    0%{opacity: 0;-webkit-transform:translateX(-3rem);}
+    100%{opacity: 1;-webkit-transform:translateX(0.4rem);}
+}
+@-webkit-keyframes right {
+    0%{opacity: 0;-webkit-transform:translateX(3rem);}
+    100%{opacity: 1;-webkit-transform:translateX(0.3rem);}
+}
+/*logo*/
+.logo{width: 3rem;position: absolute;left: 2.25rem;bottom: 1rem;opacity: 0;}
+.logo.ani{animation: rscale 3.5s linear 1s;animation-fill-mode: forwards;-webkit-animation: rscale 3.5s linear 1s;-webkit-animation-fill-mode: forwards;}
+@keyframes rscale {
+    0%{transform: scale(3);opacity: 0;}
+    20%{transform: scale(1);opacity: 1;}
+    70%{transform: scale(1);opacity: 1;}
+    100%{transform: scale(1);opacity: 0;}
+}
+@-webkit-keyframes rscale {
+    0%{-webkit-transform: scale(3);opacity: 0;}
+    20%{-webkit-transform: scale(1);opacity: 1;}
+    70%{-webkit-transform: scale(1);opacity: 1;}
+    100%{-webkit-transform: scale(1);opacity: 0;}
+}
+/*vs*/
+
+.v_left{width:1rem;height:2rem;position:absolute;bottom:5rem;left:0;opacity: 0;background: url("../images/lan-V.png") no-repeat;background-size:1rem 2rem;}
+.vs.ani .v_left{animation: vleft 2s ease 2s;animation-fill-mode:forwards;-webkit-animation: vleft 2s ease 2s;-webkit-animation-fill-mode: forwards;}
+.s_right{width:2rem;height:2rem;position:absolute;bottom:4rem;right:0;opacity: 0;background: url("../images/lan-S.png") no-repeat;background-size:2rem 2rem;}
+.vs.ani .s_right{animation: sright 2s ease 2s;animation-fill-mode:forwards;-webkit-animation: sright 2s ease 2s;-webkit-animation-fill-mode: forwards;}
+@keyframes vleft {
+    0%{opacity: 0;transform:translate(1rem,-1rem);background-image: url("../images/lan-V.png")}
+    25%{opacity: 1;transform:translate(3rem,0);background-image: url("../images/hong-V.png")}
+    75%{opacity: 1;transform:translate(3rem,0);background-image: url("../images/lan-V.png")}
+    100%{opacity:0;transform:translate(3rem,0);background-image: url("../images/lan-V.png")}
+}
+@keyframes sright {
+    0%{opacity: 0;transform:translate(1rem,-1rem);background-image: url("../images/lan-S.png")}
+    25%{opacity: 1;transform:translate(-2.8rem,0);background-image: url("../images/hong-S.png")}
+    75%{opacity: 1;transform:translate(-2.8rem,0);background-image: url("../images/lan-S.png")}
+    100%{opacity:0;transform:translate(-2.8rem,0);background-image: url("../images/lan-S.png")}
+}
+@-webkit-keyframes vleft {
+    0%{opacity: 0;-webkit-transform:translate(1rem,-1rem);background-image: url("../images/lan-V.png")}
+    25%{opacity: 1;-webkit-transform:translate(3rem,0);background-image: url("../images/hong-V.png")}
+    75%{opacity: 1;-webkit-transform:translate(3rem,0);background-image: url("../images/lan-V.png")}
+    100%{opacity:0;-webkit-transform:translate(3rem,0);background-image: url("../images/lan-V.png")}
+}
+@-webkit-keyframes sright {
+    0%{opacity: 0;-webkit-transform:translate(1rem,-1rem);background-image: url("../images/lan-S.png")}
+    25%{opacity: 1;-webkit-transform:translate(-2.8rem,0);background-image: url("../images/hong-S.png")}
+    75%{opacity: 1;-webkit-transform:translate(-2.8rem,0);background-image: url("../images/lan-S.png")}
+    100%{opacity:0;-webkit-transform:translate(-2.8rem,0);background-image: url("../images/lan-S.png")}
+}
+/*boom*/
+.fire{width: 3rem;position: absolute;bottom: 4rem;left: 2.25rem;opacity:0;}
+.vs.ani .fire{animation: fire .1s linear 2.5s;animation-fill-mode:forwards;opacity: 0;-webkit-animation: fire .1s linear 2.5s;-webkit-animation-fill-mode:forwards;}
+@keyframes fire {
+    0%{opacity: 0;}
+    50%{opacity: 1}
+    100%{opacity: 0;}
+}
+@-webkit-keyframes fire {
+    0%{opacity: 0;}
+    50%{opacity: 1}
+    100%{opacity: 0;}
+}
+/*txt*/
+.txt_box{position:absolute;bottom:2.4rem;width:6.1rem;background:url("../images/mianban.png") no-repeat ;height:5rem;background-size:6rem 5rem;left:0.75rem;padding: 1rem 0.8rem .9rem 1rem;}
+.txt_box .txt{font-size: .32rem;color: #fff;line-height: 1.5;}
+/*btn*/
+.next_btn1{background:url("../images/anniu-01.png") no-repeat;width:3rem;height:1.2rem;background-size:3rem 1.2rem;z-index: 999999;position: absolute;bottom: 0.5rem;left: 2.25rem;}
+.btn_line_top{width: 1.63rem;height: 0.2rem;overflow: hidden;position:absolute;top: 0;left: 0.735rem;}
+.btn_line_bottom{width: 1.63rem;height: 0.2rem;overflow: hidden;position:absolute;top: 1rem;left: 0.735rem;}
+.line_left_top{background:url("../images/guangsu.png") no-repeat left;background-size:0.82rem 0.2rem;height:0.2rem;position:absolute;width:100%;left:-50%;}
+.line_right_top{background:url("../images/guangsu.png") no-repeat right;background-size:0.82rem 0.2rem;height:0.2rem;position:absolute;width:100%;left:50%;}
+.line_left_bottom{background:url("../images/guangsu.png") no-repeat left;background-size:0.82rem 0.2rem;height:0.2rem;position:absolute;width:100%;left:-50%;}
+.line_right_bottom{background:url("../images/guangsu.png") no-repeat right;background-size:0.82rem 0.2rem;height:0.2rem;position:absolute;width:100%;left:50%;}
+.current{width:1.63rem;height:0.2rem;position:absolute;background-size:1.63rem 0.2rem;}
+.current.ani{width:1.63rem;height:0.2rem;position:absolute;animation: current 0.5s linear;animation-fill-mode:forwards;background-size:1.63rem 0.2rem;-webkit-animation: current 0.5s linear;-webkit-animation-fill-mode:forwards;}
+@keyframes current {
+    0%{background-image:none;}
+    10%{background-image:url("../images/1.png");}
+    20%{background-image:url("../images/2.png");}
+    30%{background-image:url("../images/3.png");}
+    40%{background-image:url("../images/4.png");}
+    50%{background-image:url("../images/5.png");}
+    60%{background-image:url("../images/6.png");}
+    70%{background-image:url("../images/7.png");}
+    80%{background-image:url("../images/8.png");}
+    90%{background-image:url("../images/9.png");}
+    100%{background-image:url("../images/9.png");}
+}
+@-webkit-keyframes current {
+    0%{background-image:none;}
+    10%{background-image:url("../images/1.png");}
+    20%{background-image:url("../images/2.png");}
+    30%{background-image:url("../images/3.png");}
+    40%{background-image:url("../images/4.png");}
+    50%{background-image:url("../images/5.png");}
+    60%{background-image:url("../images/6.png");}
+    70%{background-image:url("../images/7.png");}
+    80%{background-image:url("../images/8.png");}
+    90%{background-image:url("../images/9.png");}
+    100%{background-image:url("../images/9.png");}
+}
+
+/*step2*/
+#step2{position:relative;height:100%;overflow: hidden;}
+#step2 .model,#step2 .model1{position:absolute;width:100%;height:100%;background:rgba(0,0,0,.8);top:0;left:0;}
+#step2 .model .txt_box,#step2 .model1 .txt_box{bottom:5.4rem;padding:0.8rem 0.6rem 0.8rem 0.9rem;;}
+#step2 .model1 .txt_box{bottom:4.6rem;}
+#step2 .model .txt_box p,#step2 .model1 .txt_box p{text-align: center;font-size: 0.38rem;}
+#step2 .model1 .txt_box p{display: table-row;}
+#step2 .model1 .txt_box .txt{height: 100%;display: table;width: 100%;}
+#step2 .model1 .txt_box .txt div{display: table-cell;vertical-align: middle;text-align: center;line-height: 0.48rem;width: 100%;height: 100%;}
+#step2 .game_bg{position:absolute;width:15rem;height:15rem;background: url(../images/beijing-01.jpg) no-repeat top center;background-size: 15rem 15rem;top:-2.5rem;left:-3.5rem;}
+#step2 .game_bg1{background-image:url("../images/beijing-01.jpg")}
+#step2 .game_bg2{background-image:url("../images/beijing-02.jpg")}
+#step2 .game_bg3{background-image:url("../images/beijing-03.jpg")}
+#step2 .game_bg1.ani,#step2 .game_bg2.ani{animation: rotate 2s linear infinite;-webkit-animation: rotate 2s linear infinite;}
+@keyframes rotate {
+    0%{transform: rotate(0);}
+    100%{transform: rotate(360deg);}
+}
+@-webkit-keyframes rotate {
+    0%{-webkit-transform: rotate(0);}
+    100%{-webkit-transform: rotate(360deg);}
+}
+#step2 .game_bg3.ani{animation: rotate3 36s linear infinite;-webkit-animation: rotate3 36s linear infinite;}
+@keyframes rotate3 {
+    0%{transform: rotate(0);}
+    100%{transform: rotate(360deg);}
+}
+@-webkit-keyframes rotate3 {
+    0%{-webkit-transform: rotate(0);}
+    100%{-webkit-transform: rotate(360deg);}
+}
+#step2 .box{width:100%;height:100%;background:url("../images/chuangkou.png") no-repeat ;position:absolute;top:0;left:0;background-size:100% 100%;}
+#step2 .box .panel{background:url("../images/chaozuotai.png") no-repeat;width:100%;height:4.2rem;position:absolute;bottom:0;left:0;background-size:100%;}
+#step2 .box .panel .Y{background:url("../images/y-tu.png") no-repeat center;width:3rem;height:2.2rem;position:absolute;bottom:1.96rem;left:0.75rem;background-size:100%;opacity: 0;}
+#step2 .box .panel .Y1{width:3rem;height:2.2rem;position:absolute;bottom:1.96rem;left:0.75rem;z-index:999;}
+#step2 .box .panel .N{background:url("../images/N-tu.png") no-repeat center;width:3rem;height:2.2rem;position:absolute;bottom:1.96rem;right:0.75rem;background-size:100%;opacity: 0;}
+#step2 .box .panel .N1{width:3rem;height:2.2rem;position:absolute;bottom:1.96rem;right:0.75rem;z-index:999;}
+#step2 .box .console{background:url("../images/kongzhitai.png") no-repeat;width:100%;height:3rem;position:absolute;bottom:0;left:0;background-size:100%;}
+#step2 .box .console .explain{width:1.5rem;height:1.5rem;position:absolute;bottom:0.1rem;left:0.1rem;background-size:100%;}
+#step2 .box .console .start{background:url("../images/hong-tu.png") no-repeat center;width:1.5rem;height:1.5rem;position:absolute;bottom:0.1rem;right:0.1rem;background-size:100%;}
+#step2 .box .wheel{background:url("../images/fangxiangpan.png") no-repeat;width:4rem;height:3.2rem;position:absolute;bottom:1rem;left:1.75rem;background-size:100%;}
+#step2 .ready{position:absolute;top:4rem;left:1.25rem;width:5rem;}
+#step2 .go{position:absolute;top:4rem;left:2.5rem;width:2.5rem;}
+#step2 .num{position: absolute;bottom: 9rem;left: 3rem;width: 1.5rem;}
+#step2 .light{position:absolute;top:0;left:0;width:100%;height:100%;}
+#step2 .light .blue{opacity: 0;}
+#step2 .light .blue_bottom{position:absolute;bottom:4.2rem;left:1.5rem;width:4.5rem;height:2rem;background:url("../images/languang.png") no-repeat ;background-size:4.5rem 2rem;}
+#step2 .light .blue_top{position:absolute;top:0.8rem;left:1.5rem;width:4.5rem;height:2rem;background:url("../images/languang.png") no-repeat ;background-size:4.5rem 2rem;transform: rotate(180deg);}
+#step2 .light .red{opacity: 0;}
+#step2 .light .red_bottom{position:absolute;bottom:4.2rem;left:1.5rem;width:4.5rem;height:2rem;background:url("../images/hongguang.png") no-repeat ;background-size:4.5rem 2rem;}
+#step2 .light .red_top{position:absolute;top:0.8rem;left:1.5rem;width:4.5rem;height:2rem;background:url("../images/hongguang.png") no-repeat ;background-size:4.5rem 2rem;transform: rotate(180deg);}
+
+#container{position:relative;width:100%;height:100%;}
+#container .container_bg_box{height:100%;width:100%;}
+
+#move{position:absolute;top:0;left:0;width:100%;height:70%;}
+
+#container .container_bg_box .container_bg1{background:url("../images/container_bg1.jpg") no-repeat center;width:100%;height:100%;background-size:cover;position:absolute;top:0;left:0;animation:bgscale1 1s linear;animation-fill-mode:forwards;-webkit-animation:bgscale1 1s linear;-webkit-animation-fill-mode:forwards;}
+#container .container_bg_box .container_bg2{background:url("../images/container_bg2.png") no-repeat center;width:100%;height:100%;background-size:cover;position:absolute;top:0;left:0;animation:bgscale2 2s linear;animation-fill-mode:forwards;-webkit-animation:bgscale2 2s linear;-webkit-animation-fill-mode:forwards;}
+#container .container_bg_box .container_bg3{background:url("../images/container_bg3.png") no-repeat center;width:100%;height:100%;background-size:cover;position:absolute;top:0;left:0;
+    animation:bgscale3 2s linear;animation-fill-mode:forwards;-webkit-animation:bgscale3 2s linear;-webkit-animation-fill-mode:forwards;}
+#container .container_bg_box .container_bg4{background:url("../images/container_bg4.png") no-repeat center;width:100%;height:100%;background-size:cover;position:absolute;top:0;left:0;
+    animation:bgscale4 2s linear infinite;-webkit-animation:bgscale4 2s linear infinite;}
+@keyframes bgscale1 {
+    0%{transform: scale(1);}
+    100%{transform: scale(1.2);}
+}
+@-webkit-keyframes bgscale1 {
+    0%{-webkit-transform: scale(1);}
+    100%{-webkit-transform: scale(1.2);}
+}
+@keyframes bgscale2 {
+     0%{transform: scale(1);}
+     100%{transform: scale(1.5);}
+ }
+@-webkit-keyframes bgscale2 {
+    0%{-webkit-transform: scale(1);}
+    100%{-webkit-transform: scale(1.5);}
+}
+@keyframes bgscale3 {
+    0%{transform: translateY(40%);}
+    100%{transform: translateY(0);}
+}
+@-webkit-keyframes bgscale3 {
+    0%{-webkit-transform: translateY(40%);}
+    100%{-webkit-transform: translateY(0);}
+}
+@keyframes bgscale4 {
+    0%{opacity:1;}
+    12.5%{opacity:0.1;}
+    25%{opacity:1;}
+    37.5%{opacity:0.1;}
+    50%{opacity:1;}
+    62.5%{opacity:0.1;}
+    75%{opacity:1;}
+    87.5%{opacity:0.1;}
+    100%{opacity:1;}
+}
+@-webkit-keyframes bgscale4 {
+    0%{opacity:1;}
+    12.5%{opacity:0.1;}
+    25%{opacity:1;}
+    37.5%{opacity:0.1;}
+    50%{opacity:1;}
+    62.5%{opacity:0.1;}
+    75%{opacity:1;}
+    87.5%{opacity:0.1;}
+    100%{opacity:1;}
+}
+
+/*step3*/
+#step3{height:100%;width:100%;background:url("../images/beijing_3.jpg") no-repeat ;background-size:cover;z-index:100;position:absolute;top:-100%;left:0;}
+#step3 .step3_box{width:100%;height:100%;position:relative;}
+#step3 .step3_box_bg{background:url("../images/beijing_4.png") no-repeat;background-size:7.5rem 8.3rem;position: absolute;bottom:0.9rem;left: 0;width: 7.5rem;height: 8.3rem;}
+#step3 .step3_title{background:url("../images/zhuti-beijing.png") no-repeat center;width:4.5rem;height:2rem;position:absolute;bottom:8.2rem;left:1.5rem;background-size:100%;}
+#step3 .cup{background:url("../images/guangying-02.png") no-repeat center;width:3.5rem;height:3.5rem;background-size:4rem 4rem;position:absolute;bottom:9rem;left:2rem;padding: 0.9rem 0.4rem 0.4rem;opacity: 0;}
+#step3 .cup.ani{animation: scale 1s linear;animation-fill-mode:forwards;-webkit-animation: scale 1s linear;-webkit-animation-fill-mode:forwards;}
+#step3 .step3_text{color:#fff;position: absolute;bottom: 6.5rem;left: 1.25rem;font-size: 0.4rem;width: 5rem;text-align: center;padding-top:0.4rem ;}
+#step3 .step3_cont{padding:0 0.9rem;}
+#step3 .code{position:absolute;bottom:6rem;left:1.5rem;width:4.5rem;z-index: 999;}
+#step3 .code_cont{position:absolute;top:0;left:0;width:2rem;opacity: 0;}
+#step3 .finger{position:absolute;top:0;right:0;width:1.6rem;opacity: 0;}
+#step3 .camera{position: absolute;top: 2.1rem;left: 3.6rem;}
+#step3 .code_txt{position: absolute;top: 2.3rem;left: 0;}
+#step3 .finger img{display:block;}
+#step3 .zwgb{background:url("../images/zwguangsu.png") no-repeat;width:1.8rem;height:0.1rem;background-size:100%;position:absolute;top:45%;left:-0.1rem;}
+#step3 .zwgb.ani{animation: roll 4s linear infinite;-webkit-animation: roll 4s linear infinite;}
+@keyframes roll {
+    0%{top:45%;}
+    25%{top:90%;}
+    75%{top:0%;}
+    100%{top:45%;}
+}
+@-webkit-keyframes roll {
+    0%{top:45%;}
+    25%{top:90%;}
+    75%{top:0%;}
+    100%{top:45%;}
+}
+#step3 .next_btn3_blue{background: url(../images/lan-1.png) no-repeat;background-size: 2.6rem 1rem;width: 2.6rem;height: 1rem;z-index: 999;position: absolute;bottom: 0.5rem;left: 0.6rem;}
+#step3 .next_btn3_red{background: url(../images/anniu-hong.png) no-repeat;background-size: 2.6rem 1rem;width: 2.6rem;height: 1rem;z-index: 999;position: absolute;bottom: 0.5rem;right:0.6rem;}
+#step3 .next_btn3 .btn_line_top{width: 1.63rem;height: 0.2rem;overflow: hidden;position: absolute;top: 0;left: 0.5rem;}
+#step3 .next_btn3 .btn_line_bottom{width: 1.63rem;height: 0.2rem;overflow: hidden;position: absolute;top: .8rem;left: 0.5rem;}
+#step3 .line{position: absolute;bottom: 0.8rem;left: 3rem;width: 1.5rem;height: 1.1rem;}
+#step3 .model3{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);z-index:99999;}
+#step3 .model3 .bs{width: 2.3rem;position: absolute;bottom: .8rem;left: 1.5rem;}
+#step3 .model3 .share{width:3rem;position:absolute;top:1rem;right:0.5rem;}
+#step3 .model3 .dhk{width:3rem;position:absolute;top:2.5rem;left:1.5rem;}

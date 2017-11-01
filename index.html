@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>大战人工智能 你就是未来战士</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/jquery.min.js"></script>
+    <script>
+        new function() {
+            var _self = this;
+            _self.width = 750; //设置默认最大宽度
+            _self.fontSize = 100; //默认字体大小
+            _self.widthProportion = function() {
+                var p = (document.body && document.body.clientWidth || document.getElementsByTagName("html")[0].offsetWidth) / _self.width;
+                return p > 1 ? 1 : p < 0.4 ? 0.5 : p;
+            }; //判断当前屏幕尺寸，设置的最大屏幕宽度之间的比例
+            _self.changePage = function() {
+                document.getElementsByTagName("html")[0].setAttribute("style", "font-size:" + _self.widthProportion() * _self.fontSize + "px !important");
+            } //修改根元素html的font-size的植
+            _self.changePage();
+            window.addEventListener('resize', function() {
+                _self.changePage();
+            }, false); //侦听屏幕宽度变化
+        };
+        
+    </script>
+
+
+</head>
+<body>
+<!--加载页-->
+<div id="loading" class="">
+    <div class="plane_box">
+        <div class="plane1"><img src="images/feiji-01.png" alt="" width="100%"></div>
+        <div class="plane2"><img src="images/feiji-01.png" alt="" width="100%"></div>
+        <div class="plane3"><img src="images/feiji-02.png" alt="" width="100%"></div>
+        <div class="plane4"><img src="images/feiji-02.png" alt="" width="100%"></div>
+    </div>
+    <div class="bar">
+        <div class="bar_lan"></div>
+    </div>
+    <div class="loading_txt">正在加载...</div>
+</div>
+<!--开始页-->
+<div id="step1" class="">
+    <div class="title"><img src="images/zhuti.png" alt="" width="100%"></div>
+    <div class="clearfix" style="position: absolute;width: 100%;bottom: 2.5rem;">
+        <div class="peo_left fl "><img src="images/jiqiren.png" alt="" width="100%"></div>
+        <div class="peo_right fr "><img src="images/ren.png" alt="" width="100%"></div>
+    </div>
+    <div class="logo">
+        <img src="images/logo.png" alt="" width="100%">
+    </div>
+    <div class="vs">
+        <div class="fire "><img src="images/huo.png" alt="" width="100%"></div>
+        <div class="v_left "></div>
+        <div class="s_right "></div>
+    </div>
+    <div class="txt_box hide">
+        <div class="txt">2217年，人类最亲密的伙伴人工智能举起反旗，试图主宰人类侵占地球。人类最终防线指挥官方博士紧急召集人类勇士组建未来战士战队，誓要捍卫人类主权。</div>
+    </div>
+    <div class="next_btn1 hide">
+        <div class="btn_line_top">
+            <div class="line_left_top"></div>
+            <div class="line_right_top"></div>
+            <div class="current"></div>
+        </div>
+        <div class="btn_line_bottom">
+            <div class="line_left_top"></div>
+            <div class="line_right_top"></div>
+            <div class="current"></div>
+        </div>
+    </div>
+</div>
+<!--答题，3D全景-->
+<div id="step2" class="hide">
+    <div class="game_bg game_bg1"></div>
+    <div class="game_bg game_bg2 hide"></div>
+    <div class="game_bg game_bg3 hide"></div>
+    <div id="container">
+        <div class="container_bg_box">
+            <div class="container_bg1"></div>
+            <div class="container_bg2"></div>
+            <div class="container_bg3">
+                <div class="container_bg4"></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="model hide">
+        <div class="txt_box">
+            <div class="txt">
+                <p>游戏说明</p>
+                <div style="font-size:0.32rem;margin-top:0.3rem;line-height: 0.48rem;">
+                    1. 挑战题均为是非题<br>
+                    2. 每题挑战时限为5秒<br>
+                    3. 答对即可进入下一题<br>
+                    4. 答错则挑战结束<br>
+                    5. 连对99题可获得未来战士称号<br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="model1 hide">
+        <div class="ready hide"><img src="images/ready.png" alt="" width="100%"></div>
+        <div class="go hide"><img src="images/go.png" alt="" width="100%"></div>
+        <div class="num hide"><img src="images/n5.png" alt="" width="100%"></div>
+        <div class="light">
+            <div class="blue">
+                <div class="blue_top"></div>
+                <div class="blue_bottom"></div>
+            </div>
+            <div class="red">
+                <div class="red_top"></div>
+                <div class="red_bottom"></div>
+            </div>
+        </div>
+        <div class="txt_box hide" style="height: 4rem;background-size: 6rem 4rem;">
+            <div class="txt">
+                <p>第 <span>01</span>题</p>
+                <div style="font-size:0.32rem;margin-top:0.3rem;line-height: 0.48rem;">
+                    一张纸最多可以折叠9次
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="panel">
+            <div class="Y"></div>
+            <div class="N"></div>
+            <div class="Y1 hide"></div>
+            <div class="N1 hide"></div>
+        </div>
+        <div class="console">
+            <div class="explain" style="background-image:url('images/lan-tu.png')"></div>
+            <div class="start"></div>
+        </div>
+        <div class="wheel"></div>
+    </div>
+    <div id="move"></div>
+</div>
+<!--奖励页-->
+<div id="step3">
+    <div class="plane_box">
+        <div class="plane1"><img src="images/feiji-01.png" alt="" width="100%"></div>
+        <div class="plane2"><img src="images/feiji-01.png" alt="" width="100%"></div>
+        <div class="plane3"><img src="images/feiji-02.png" alt="" width="100%"></div>
+        <div class="plane4"><img src="images/feiji-02.png" alt="" width="100%"></div>
+    </div>
+    <div class="step3_box">
+        <div class="step3_box_bg"></div>
+        <div class="step3_title"><img src="images/zhuti.png" alt="" width="100%"></div>
+        <div class="cup"><img src="images/jiangbei.png" alt="" width="100%"></div>
+        <div class="step3_text">
+            <div class="step3_num">答对0题！</div>
+            <div class="step3_cont">脑子是个好东西，你咋没带呢！</div>
+        </div>
+        <div class="code">
+            <div class="code_cont"><img src="images/erweima.png" alt="" width="100%;"></div>
+            <div class="finger"><img src="images/zhiwen.png" alt="" width="100%;"><div class="zwgb"></div></div>
+            <div class="camera"><img src="images/shexiangtou.png" alt="" width="100%;"></div>
+            <div class="code_txt"><img src="images/channg.png" alt="" width="100%;"></div>
+        </div>
+        <div class="next_btn3 next_btn3_blue">
+            <div class="btn_line_top">
+                <div class="line_left_top"></div>
+                <div class="line_right_top"></div>
+                <div class="current"></div>
+            </div>
+            <div class="btn_line_bottom">
+                <div class="line_left_top"></div>
+                <div class="line_right_top"></div>
+                <div class="current"></div>
+            </div>
+        </div>
+        <div class="line"><img src="images/xian.png" alt="" width="100%;"></div>
+        <div class="next_btn3 next_btn3_red">
+            <div class="btn_line_top">
+                <div class="line_left_top"></div>
+                <div class="line_right_top"></div>
+                <div class="current"></div>
+            </div>
+            <div class="btn_line_bottom">
+                <div class="line_left_top"></div>
+                <div class="line_right_top"></div>
+                <div class="current"></div>
+            </div>
+        </div>
+        <div class="model3 hide">
+            <div class="bs"><img src="images/boshi.png" alt="" width="100%"></div>
+            <div class="share"><img src="images/fengxiang.png" alt="" width="100%"></div>
+            <div class="dhk"><img src="images/duihuakuang.png" alt="" width="100%"></div>
+        </div>
+    </div>
+</div>
+<!--音效-->
+<audio id="bgm_neorock" src="music/bgm_neorock.mp3" loop></audio>
+<audio id="bgm_quest" src="music/bgm_quest.mp3" loop></audio>
+<audio id="N" src="music/N.mp3"></audio>
+<audio id="Y" src="music/Y.mp3"></audio>
+<audio id="se_syber05" src="music/se_syber05.mp3"></audio>
+<audio id="se_system45" src="music/se_system45.mp3"></audio>
+<audio id="quxiao" src="music/quxiao.mp3"></audio>
+
+<script>
+
+    //实现一系列图片的预加载
+    //参数sources:图片信息关联数组
+    //参数callback:回调函数——图片预加载完成后立即执行此函数。
+    function loadImages(sources, callback){
+        var count = 0,
+            images =[],
+            imgNum = 0;
+        for(src in sources){
+            imgNum++;
+        }
+        for(src in sources){
+            images[src] = new Image();
+            images[src].onload = function(){
+                if(++count >= imgNum){
+                    callback(images);
+                }
+            }
+            images[src].src = sources[src];
+        }
+    }
+    //       initx();
+    function initx(){
+        $('#bgm_neorock')[0].volume = 0.3;
+        $('#bgm_quest')[0].volume = 0.3;
+        $('#bgm_neorock')[0].play();
+        $('.peo_left,.peo_right,.title,.logo,.vs').addClass('ani');
+        $('#step1 .txt_box').delay(4500).fadeIn(500);
+        $('.next_btn1').delay(4500).fadeIn(500);
+
+        $('.next_btn1').click(function(){
+            $('#se_system45')[0].play();
+            $('#step1 .current').addClass('ani');
+            $(this).find('.line_right_top').animate({'left':'0'},500);
+            $(this).find('.line_left_top').animate({'left':'0'},500,function(){
+                $('#step1').fadeOut();
+                $('#step2').fadeIn();
+            })
+        });
+        var flag = true;
+        var b = "";
+        // 说明
+        $('.explain').click(function(){
+            $('#se_system45')[0].play();
+            if(flag){
+                $('#se_syber05')[0].play();
+                $(this).css('background-image','url("'+imgList[18]+'")');
+                flag = false;
+                $('.model').fadeIn();
+                $('#move').hide();
+            }else{
+                $('#quxiao')[0].play();
+                $(this).css('background-image','url("'+imgList[19]+'")');
+                flag = true;
+                $('.model').fadeOut();
+                $('#move').show();
+            }
+        })
+        $('body').on('click','.box',function(e){
+            var target = e.target;
+            if(target.className != 'explain'){
+                if($('.model').css('display') == 'block'){
+                    $('#quxiao')[0].play();
+                    $('.explain').css('background-image','url("'+imgList[19]+'")');
+                    flag = true;
+                    $('.model').fadeOut();
+                    $('#move').show();
+                }
+            }
+        })
+
+
+        // 开始按钮
+        $('.start').click(function(){
+            $('.next_btn3_red').unbind('click');
+            $('.next_btn3_blue').unbind('click');
+            $('.model3').unbind('click');
+            $('.Y1').unbind('click');
+            $('.N1').unbind('click');
+            document.getElementById('se_system45').play();
+            document.getElementById('bgm_neorock').pause();
+            document.getElementById('bgm_quest').play();
+            var list = [
+                {'一张纸最多可以折叠9次':'N'},
+                {'人睡觉比坐着看电视所消耗的卡路里少':'N'},
+                {'玛丽莲·梦露有 6 只脚趾':'Y'},
+                {'猪不能仰头望天空':'Y'},
+                {'鸭的叫声是不会有回音的':'N'},
+                {'太空没有重力所以没办法哭泣':'Y'},
+                {'一个正常人一天平均要眨眼一万到一万五千次':'Y'},
+                {'把石头放在微波炉中加热会爆炸':'Y'},
+                {'狗可以发出50多个音':'N'},
+                {'人体的胃每 2 个星期便会更新一次分泌物 , 否则它会自我消化':'Y'},
+                {'最早的可乐是绿色的':'Y'},
+                {'方芝维是智能家居品牌':'Y'},
+                {'纯蜂蜜不会变质':'Y'},
+                {'海星每只脚上都有1只眼睛':'Y'},
+                {'猫头鹰不能分辨蓝色':'N'},
+                {'大象可用头来站立':'Y'},
+                {'如果你打电话超过一个小时 , 那么你耳朵里的耳屎会增加大概 700 倍左右':'Y'},
+                {'人的一生大约会吃将近300吨的食物':'N'},
+                {'人类至今为止挖掘到的黄金能填满一个篮球场':'N'},
+                {'马克·吐温拥有大学学历':'N'},
+                {'最早的口香糖是用树皮做的':'Y'},
+                {'托马斯·阿尔瓦·爱迪生怕黑':'Y'},
+                {'阿拉伯女人可以因为丈夫不为她倒咖啡而提出离婚':'Y'},
+                {'唇膏里的珠光精华其实是鱼鳞':'Y'},
+                {'长颈鹿没办法咳嗽':'Y'},
+                {'每个人都可以放大缩小自己的鼻孔':'N'},
+                {'牡蛎的性别可以随意变化':'Y'},
+                {'汽车尾气比雾霾天的空气干净':'Y'},
+                {'宿便会导致身材变形':'N'},
+                {'方便面只有热量，没有营养':'N'},
+                {'蟑螂没有头可以再活90天':'Y'},
+                {'蒙那丽莎的嘴唇画了十二年':'N'},
+                {'早上摘下的玫瑰比下午摘的更易保存':'N'},
+                {'虎鲨的胚胎在母亲的子宫里需经过激烈的搏斗才能存活':'Y'},
+                {'一只 30公斤重的章鱼可以穿过一个硬币大小的洞':'Y'},
+                {'河马跑的比奥运冠军快':'Y'},
+                {'第一个坐降落伞的动物是猪':'N'},
+                {'鲨鱼可以侦测到水中仅百万分之一含量的血液':'Y'},
+                {'桑巴舞的桑巴原意是一起磨肚脐吧':'Y'},
+                {'小孩子在春天长得比较快':'Y'},
+                {'毛毛虫身上有没有肌肉':'N'},
+                {'把灭火器放在火堆里会发生爆炸，而后灭火':'Y'},
+                {'从4000英尺处坠落到地面用时90多秒':'N'},
+                {'两人同时跳伞能听得见对方说话':'N'},
+                {'蜗牛不吃东西可以睡 3 年':'Y'},
+                {'影星汤米·李·琼斯和美国副总统科尔是室友':'Y'},
+                {'quick brown fox jumps over the lazy dog 可以用尽 26 个字母':'Y'},
+                {'如果一个月的第一天是星期日 , 那么这个月就有黑色星期五':'Y'},
+                {'七巧板是中国人发明的':'Y'},
+                {'鱼不会伸舌头':'Y'},
+                {'鸵鸟的眼睛比脑子大':'Y'},
+                {'北极熊都是左撇子':'N'},
+                {'如果跳蚤有人那么大，那么它一跳可以跳过一个足球场':'Y'},
+                {'菠菜适合用于补铁':'N'},
+                {'喝咖啡可以解酒':'N'},
+                {'100升可燃冰可以让汽车行驶5万公里':'N'},
+                {'喝弱碱性水对身体更健康':'N'},
+                {'“美”字最初的含义是羊大即为美':'N'},
+                {'“弱冠”指的是男子二十岁':'Y'},
+                {'中国古代最大的一部百科全书《四库全书》':'N'},
+                {'白皮鸡蛋比红皮鸡蛋更有营养':'N'},
+                {'吃辣容易让人长痘':'N'},
+                {'在农场长大的孩子不容易过敏':'Y'},
+                {'红酒可以抗癌':'N'},
+                {'仅靠人类的声音能震碎玻璃':'Y'},
+                {'车速越快行车越平稳':'Y'},
+                {'车子坠入水里时，要等车子充满水时才能打开车门':'Y'},
+                {'车子坠入水里时，赶快打开车窗就能逃生':'Y'},
+                {'转动中的天花板吊扇能砍断人头':'N'},
+                {'电器掉入装满水的浴缸时能够把人电死':'Y'},
+                {'在飓风时打开所有的窗户能减小对房屋的损害':'N'},
+                {'10斤重的物体是1斤重轻的物体下落速度的10倍':'N'},
+                {'李白是唐宋八大家之一':'N'},
+                {'胶带可以吊起一辆汽车':'Y'},
+                {'酒后挨耳光可以醒酒':'Y'},
+                {'食物落地5秒内捡起来不脏':'N'},
+                {'汽车能在160km每小时的情况下打水漂':'Y'},
+                {'涂奶油的土司掉落时大部分是涂奶油的面朝下':'N'},
+                {'对新鲜牛肉进行锤击，能使它更加美味':'Y'},
+                {'学步车可以帮助孩子学走步':'N'},
+                {'催熟的香蕉会导致儿童性早熟':'N'},
+                {'西游记中的火焰山位于新疆':'Y'},
+                {'造纸术是东汉发明的':'N'},
+                {'“人生自古谁无死，留取丹心照汗青”是屈原的诗句':'N'},
+                {'“仁者见仁，智者见智”出自周易':'Y'},
+                {'从面积来看，中国是世界第三大国':'Y'},
+                {'世上最老的金鱼活了60多岁':'N'},
+                {'地球平均每分钟被雷击6000次':'Y'},
+                {'打火机是比火柴更早发明出来的':'Y'},
+                {'人类最强韧有力的肌肉是舌头':'Y'},
+                {'古时“结发”是指妻子把头发束起来':'N'},
+                {'风筝最初是用来通报消息的':'Y'},
+                {'成语“咫尺天涯”中咫尺都是计量单位，咫比尺长':'N'},
+                {'老鼠和马不能呕吐':'Y'},
+                {'宣纸得名于它的使用人群':'N'},
+                {'用凸透镜可以看到放大的图像':'Y'},
+                {'虾的心脏在头部':'Y'},
+                {'喝腊八粥是为了纪念释迦牟尼':'Y'},
+                {'世界上最小的国家是梵蒂冈':'Y'}
+            ];
+            $(this).css('background-image','url("'+imgList[20]+'")');
+            $('.explain').css('background-image','url("'+imgList[19]+'")');
+            flag = false;
+            $('.model').fadeOut();
+            $('#container').fadeOut();
+            $('.game_bg1').addClass('ani');
+            $('.Y1,.N1').removeClass('hide');
+            $('.Y').animate({'opacity':'1'},200);
+            $('.N').animate({'opacity':'1'},200,function(){
+                $('.game_bg2').addClass('ani').fadeIn(500);
+            });
+            $('.wheel').animate({'bottom':'0'},500);
+            $('.console').animate({'bottom':'-3rem'},500,function(){
+                $('.game_bg3').addClass('ani').fadeIn(500);
+                var game = true;
+                var game_bg_timer = setInterval(function(){
+                    if(game){
+                        $('.game_bg3').animate({'top':'-2.6rem','left':'-3.6rem'},500);
+                    }else{
+                        $('.game_bg3').animate({'top':'-2.5rem','left':'-3.5rem'},500);
+                    }
+                    game = !game;
+                },1000);
+                $('.model1').fadeIn(1000);
+                $('.model1 .ready').delay(500).fadeIn().delay(500).fadeOut();
+                $('.model1 .go').delay(1500).fadeIn().delay(500).fadeOut();
+
+                setTimeout(function(){
+                    setTimeout(function(){
+                        count();
+                    },1500);
+                }, 1500);
+
+                var n = 0;//第几题
+                var obj;
+                function count(){
+                    b = "";//初始化b
+                    $('.N').css('background-image','url("'+imgList[25]+'")');
+                    $('.Y').css('background-image','url("'+imgList[23]+'")');
+                    //随机化数组
+                    shuffle(list);
+                    function shuffle(arr){
+                        var len = arr.length;
+                        for(var i = 0; i < len - 1; i++){
+                            var idx = Math.floor(Math.random() * (len - i));
+                            var temp = arr[idx];
+                            arr[idx] = arr[len - i - 1];
+                            arr[len - i -1] = temp;
+                        }
+                        obj = arr.shift();
+                        return arr;
+                    }
+                    //换题
+                    n++;
+                    if(n < 10){
+                        n = '0'+n;
+                    }
+                    $('.txt p span').text(n);
+                    for (var key in obj) {
+                        $('.model1 .txt div').text(key);
+                    }
+                    $('#step2 .model1 .txt_box').fadeIn();
+                    $('.num').removeClass('hide');
+                    var countdown = 6;
+                    settime();
+                    function settime() {
+                        if (countdown == 1) {
+                            $('.num').find('img').attr('src','');
+                            if(b == obj[key]){//答对
+                                document.getElementById('Y').play();
+                                $('.blue').stop(true).animate({'opacity':'1'},200,function(){
+                                    $('.blue').delay(600).animate({'opacity':'0'},200,function(){
+                                        if(n == 99){
+                                            wx_title = '完美通关，我就是拯救人类的未来战士！有谁能与我并肩作战？';//微信分享标题
+                                            // wx1(appId,timestamp,nonceStr,signature);
+                                            document.getElementById('bgm_quest').pause();
+                                            document.getElementById('bgm_neorock').play();
+                                            $('.step3_title img').attr('src','images/chenghao.png');
+                                            $('.step3_num').text('厉害！');
+                                            $('.step3_cont').text('你就是我们要找的未来战士！');
+                                            reward();
+                                        }else{
+                                            count();
+                                        }
+                                    });
+                                })
+                                return true;
+                            }else{//答错
+                                document.getElementById('N').play();
+                                document.getElementById('bgm_quest').pause();
+                                document.getElementById('bgm_neorock').play();
+                                $('.red').stop(true).animate({'opacity':'1'},200,function(){
+                                    $('.red').delay(600).animate({'opacity':'0'},200,function(){
+                                        //结果页
+                                        $('.step3_title img').attr('src','images/zhuti.png');
+                                        if(n == 1){
+                                            n=n-1;
+                                            $('.step3_num').text('答对0题！');
+                                            $('.step3_cont').text('脑子是个好东西，你咋没带呢！');
+                                        }else if(n <= 21){
+                                            n=n-1;
+                                            $('.step3_num').text('才答对'+n+'题！');
+                                            $('.step3_cont').text('人美也需多读书！');
+                                        }else if(n <= 41){
+                                            n=n-1;
+                                            $('.step3_num').text('只答对了'+n+'题，');
+                                            $('.step3_cont').text('你的洪荒之力呢？');
+                                        }else if(n <= 61){
+                                            n=n-1;
+                                            $('.step3_num').text('你竟然答对了'+n+'题，');
+                                            $('.step3_cont').text('因缺思厅啊！');
+                                        }else if(n <= 81){
+                                            n=n-1;
+                                            $('.step3_num').text('你竟答对了'+n+'题，');
+                                            $('.step3_cont').text('是个老司机啊！');
+                                        }else if(n <= 99){
+                                            n=n-1;
+                                            $('.step3_num').text('你竟答对了'+n+'题，');
+                                            $('.step3_cont').text('方博士方了！');
+                                        }
+                                        wx_title = '我成功连闯'+n+'关，离拯救人类还差一小步，还有比我更牛的吗？';//微信分享标题
+//                                        wx1(appId,timestamp,nonceStr,signature);
+                                        reward();
+                                    });
+                                });
+                                return false;
+                            }
+                        } else {//倒计时
+                            countdown--;
+                            if(countdown > 0){
+                                $('.num').find('img').attr('src','images/n'+countdown+'.png');
+                            }
+                        }
+                        setTimeout(function() {
+                            settime();
+                        },1000)
+                    }
+                    function reward(){
+                        $('#step3').animate({'top':'0'},500,function(){
+                            $('#step2').delay(1000).fadeOut();
+                            $('.cup').addClass('ani');
+                            $('.camera').delay(1000).animate({'left':'0.6rem'},1000,function(){
+                                $('.finger,.code_cont').animate({'opacity':'1'},500,function(){
+                                    $('.zwgb').addClass('ani');
+                                    $('.N').css('background-image','url("'+imgList[25]+'")');
+                                    $('.Y').css('background-image','url("'+imgList[23]+'")');
+                                    $('.game_bg1').removeClass('ani');
+                                    $('.game_bg2').removeClass('ani').fadeOut(100);
+                                    $('.game_bg3').removeClass('ani').fadeOut(100);
+                                });
+                            });
+                        });
+                    }
+                }
+            })
+            $('.next_btn3_red').click(function(){
+                document.getElementById('se_system45').play();
+                $(this).find('.current').addClass('ani');
+                $(this).find('.line_right_top').animate({'left':'0'},500);
+                $(this).find('.line_left_top').animate({'left':'0'},500,function(){
+                    $('.model3').fadeIn(500);
+                })
+            })
+            $('.next_btn3_blue').click(function(){
+                wx_title = '我人机大战在即，你是拯救人类的未来战士吗？快来一验身份吧！';//微信分享标题
+//                wx1(appId,timestamp,nonceStr,signature);
+                document.getElementById('se_system45').play();
+                $(this).find('.current').addClass('ani');
+                $(this).find('.line_right_top').animate({'left':'0'},500);
+                $(this).find('.line_left_top').animate({'left':'0'},500,function(){
+                    $('#step2').fadeIn(500);
+                    $('#step3').css('top','-100%');
+                    $('#container').fadeIn();
+                    $('.wheel').css('bottom','1rem');
+                    $('.console').css('bottom','0');
+
+                    $('.Y1,.N1').addClass('hide');
+                    $('.Y').css('opacity','0');
+                    $('.N').css('opacity','0');
+                    $('.model1').hide();
+                    $('.num').addClass('hide');
+                    $('.model1 .txt_box').hide();
+                    $('.cup,.zwgb,.next_btn3 .current').removeClass('ani');
+                    $('.code_cont,.finger').css('opacity','0');
+                    $('.camera').css('left','3.6rem');
+                    $('.next_btn3_blue .line_right_top').css('left','50%');
+                    $('.next_btn3_blue .line_left_top').css('left','-50%');
+                })
+            })
+            $('.model3').click(function(){
+                document.getElementById('quxiao').play();
+                $(this).fadeOut(500);
+                $('.next_btn3_red .current').removeClass('ani');
+                $('.next_btn3_red .line_right_top').animate({'left':'50%'},500);
+                $('.next_btn3_red .line_left_top').animate({'left':'-50%'},500)
+            })
+            $('.Y1').click(function(){
+                if(b != 'Y'){
+                    document.getElementById('se_system45').play();
+                    b = 'Y';
+                    $('.Y').css('background-image','url("'+imgList[22]+'")');
+                    $('.N').css('background-image','url("'+imgList[25]+'")');
+                }
+            });
+            $('.N1').click(function(){
+                if(b != 'N'){
+                    document.getElementById('se_system45').play();
+                    b = 'N';
+                    $('.N').css('background-image','url("'+imgList[24]+'")');
+                    $('.Y').css('background-image','url("'+imgList[23]+'")');
+                }
+
+            });
+        })
+    }
+</script>
+<script>
+    var imgList =[
+        "images/hong-V.png",
+        "images/hong-S.png",
+        "images/1.png",
+        "images/2.png",
+        "images/3.png",
+        "images/4.png",
+        "images/5.png",
+        "images/6.png",
+        "images/7.png",
+        "images/8.png",
+        "images/9.png",
+        "images/beijing-01.jpg",
+        "images/beijing-02.jpg",
+        "images/beijing-03.jpg",
+        "images/chuangkou.png",
+        "images/chaozuotai.png",
+        "images/kongzhitai.png",
+        "images/fangxiangpan.png",
+        "images/lan-ao.png",
+        "images/lan-tu.png",
+        "images/hong-ao.png",
+        "images/hong-tu.png",
+        "images/y-ao.png",
+        "images/y-tu.png",
+        "images/N-ao.png",
+        "images/N-tu.png",
+        "images/hongguang.png",
+        "images/languang.png",
+        "images/n1.png",
+        "images/n2.png",
+        "images/n3.png",
+        "images/n4.png",
+        "images/n5.png",
+        "images/container_bg1.jpg",
+        "images/container_bg2.png",
+        "images/container_bg3.png",
+        "images/container_bg4.png"
+    ];
+    $(document).ready(function(){
+        var gts = function(o){return document.getElementById(o);};
+        //预加载
+//        var isANDROID  = (/Android/i.test(navigator.userAgent));
+//        if (isANDROID){gts('LoadNUM').style.fontSize='2rem'}
+        var setLoad = 0;
+        var pti = setInterval(onProgress,300,setLoad);
+        function onProgress(value){
+            console.log(value);
+            if (value <= .49){
+                if (setLoad < 50){
+                    setLoad++;
+                }
+                value= setLoad/10;
+            }else{
+                if (pti != -1) {
+                    clearInterval(pti);
+                    pti = -1;
+                }
+            }
+            $('.bar_lan').css('width',parseInt(value*100)+'%');
+            if(value == 0.8){
+                loadImages(imgList,function(images){
+
+                })
+            }
+            if(value == 1){
+                if (pti != -1){
+                    clearInterval(pti);
+                    pti = -1;
+                }
+
+                gts('loading').className="loadhid";
+                initx();
+            }
+        }
+        var startX,startY,moveX,moveY;
+        var moveFlag = 0;
+        document.getElementById('move').addEventListener( 'touchstart', onDocumentTouchStart, false );
+        document.getElementById('move').addEventListener( 'touchmove', onDocumentTouchMove, false );
+        function onDocumentTouchStart( event ) {
+            if ( event.touches.length == 1 ) {
+                event.preventDefault();
+                startX = event.touches[ 0 ].pageX;
+                startY = event.touches[ 0 ].pageY;
+
+            }
+        }
+        function onDocumentTouchMove( event ) {
+            if ( event.touches.length == 1 ) {
+                event.preventDefault();
+                moveX = event.touches[ 0 ].pageX;
+                moveY = event.touches[ 0 ].pageY;
+                if( moveX < startX ) {//左滑
+                    if (moveFlag <= 0) {
+                        $('.container_bg1').animate({'backgroundPositionX': '60%'},500);
+                        $('.container_bg2').animate({'backgroundPositionX': '200%'},500);
+                        $('.container_bg3,.container_bg4').animate({'backgroundPositionX': '100%'},500);
+                        moveFlag = 1;
+                    }
+                }else{
+                    if (moveFlag >= 0) {
+                        $('.container_bg1').animate({'backgroundPositionX': '50%'},500);
+                        $('.container_bg2').animate({'backgroundPositionX': '50%'},500);
+                        $('.container_bg3,.container_bg4').animate({'backgroundPositionX': '50%'},500);
+                        moveFlag = -1;
+                    }
+                }
+            }
+        }
+    })
+</script>
+
+
+</body>
+</html>
